@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-20">
+    <title>Fitness website</title>
+    <style>
+        body { background: linear-gradient(to bottom, #9999ff 13%, #ff66cc 102%);}
+        img {
+        float: right;
+        width: 20%;
+        height: auto%;}
+        h2, h3 {text-decoration: underline}
+        .fixed-nav-bar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255,130,255,0.7);}
+        table, th, td, nav { text-align: center}
+        .clearfix { overflow: auto;}
+        table {visibility: hidden}
+        li.dropdown {
+            display: inline-block;
+            }
+        .dropdown-content {
+            display : none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;}
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+            }
+        p, td, th, nav, { font-size: 2vw}
+        div { font-size: 1vw}
+        th, td, img, {padding: 5px}
+        th { background-color: lightpink}
+        td { background-color: powderblue}
+        
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+        .popup .popupimg {
+          visibility: hidden;
+          width: 300px;
+          height: auto;
+          background-color: #555;
+          color: #fff;
+          border-radius: 6px;
+          padding: 8px;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -80px;
+        }
+        
+        .popup .popupimg::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+        
+        .popup .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+        }
+        
+        @-webkit-keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+        
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity:1 ;}
+        }
+        
+    </style>
+</head>
+<body>
+<header><br><br>
+    <h1 style="text-align:center;"> This website is dedicated to home-workouts<br> and fitness
+     for Vanessa
+    </h1>
+</header>
+<nav class="fixed-nav-bar">
+        <li class = "dropdown"><a href="#upper_body">Upper Body</a> |
+            <div class = "dropdown-content">
+                <a href="#title_back"> Back exercises</a>
+                <a href="#title_chest"> Chest exercises</a>
+                <a href="#title_arms"> Arm exercises</a>
+                <a href="#title_abs"> Ab exercises</a>
+            </div>
+        </li>
+        <li class = "dropdown"><a href="#lower_body">Lower Body</a> |
+            <div class = "dropdown-content">
+                <a href="#title_glutes"> Glute exercises</a>
+                <a href="#title_legs"> Leg exercises</a>
+            </div>
+        </li>
+        <a href="#title_cardio">Cardiovascular</a> |
+        <li class = "dropdown"><a href="#title_flex&yoga">Flexibility and Stretching</a> |
+            <div class = "dropdown-content">
+                <a href="#title_global"> Global stretches</a>
+                <a href="#title_targeted"> Targeted stretches</a>
+            </div>
+        </li>
+        <a href="#contact_details">Contact details</a>
+</nav>
+<h2 id="upper_body">Upper body </h2>
+
+<h3 id = "title_back" >Back:</h3>
+<button type="button" onclick="document.getElementById('Back').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Back').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img1" src="https://dl.dropboxusercontent.com/s/w0omov4cpu2sjiv/back1.jpg" alt="back image">
+    Your upper back muscles and lats form one of the largest areas of the upper body and therefore essential in hypertrophy workouts as well as fat loss workouts. Because these areas are so significant, back strengthening exercises will help you improve your maxes on most other upper body lifts. <br><br>
+    It is very important to train your back muscles for posture because most of us sit all day long at work, and our shoulders tend to roll forward. Most men will focus on their chest in the gym, which will give them muscle imbalances as well as more rounding of the shoulders, which will create that slouchy "ape" look when they stand. We need to fix this by doing more pulling exercises of the upper back, traps, lats and also your rear deltoids(part of the shoulder muscles).
+</div>
+
+<table id="Back" style ="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Back1" name="Back widows" value="upper_back">
+                    <label for="Back1"></label></td>
+        <td>
+            <div class="popup" onclick="popup1()">Back widows
+                <img class="popupimg" id="backwidowPopup"
+                     src="https://dl.dropboxusercontent.com/s/5ozusuyjedcv9sq/back_widow.jpg"
+                           alt="Back widows exercise">
+            </div>
+        </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=mjnseqLiVXM&t=45"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Back2" name="Back extensions" value="mid_back">
+                    <label for="Back2"></label></td>
+        <td>
+            <div class="popup" onclick="popup2()">Back extensions
+                <img class="popupimg" id="backextensionsPopup"
+                     src="https://dl.dropboxusercontent.com/s/ob85zrsnt0avrr5/back_extension.jpg"
+                           alt="Back extensions exercise">
+            </div>
+        </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=Bw9YuQTTc58"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Back3" name="Reverse snow angels" value="upper_back">
+                    <label for="Back3"></label></td>
+        <td title="Can do this with or without weights">
+            <div class="popup" onclick="popup3()">Reverse snow angels
+                <img class="popupimg" id="reversesnowangelsPopup"
+                     src="https://dl.dropboxusercontent.com/s/330akzfxlcbjum6/reversesnow_angel.png"
+                           alt="Reverse snow angels">
+            </div>
+            </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=S87Qu1Icym8&t=323s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Back4" name="Bird dog" value="mid_back">
+                    <label for="Back4"></label></td>
+        <td>
+            <div class="popup" onclick="popup4()">Bird dog
+                <img class="popupimg" id="birddogPopup"
+                     src="https://dl.dropboxusercontent.com/s/9mhs31mp7k57xkw/bird-dog.jpg"
+                           alt="Bird dog Image">
+            </div>
+        </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=wiFNA3sqjCA"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Back5" name="Floor pull ups" value="mid_back">
+                    <label for="Back5"></label></td>
+        <td title="You can use a toel or weights for this">
+            <div class="popup" onclick="popup5()">Floor pull ups
+                <img class="popupimg" id="floorpullupsPopup"
+                     src="https://dl.dropboxusercontent.com/s/w3gwkzxqtl0s8xw/floor_pull-ups.jpg"
+                           alt="Floor pull ups image">
+            </div>
+            </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=S87Qu1Icym8&t=280s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Back6" name="Bent back rows" value="mid_back">
+                    <label for="Back6"></label></td>
+        <td title="You can use a weights or a towel for this one">
+            <div class="popup" onclick="popup6()">Bent back rows
+                <img class="popupimg" id="bentbackrowsPopup"
+                     src="https://dl.dropboxusercontent.com/s/t1mw1goq8ooez1z/bent-back_rows.jpg"
+                           alt="Bent back rows Image">
+            </div>
+            </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=KFY3p3eMPkk&t=73s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup1() {
+  var popup = document.getElementById("backwidowPopup");
+  popup.classList.toggle("show");
+}
+function popup2() {
+  var popup = document.getElementById("backextensionsPopup");
+  popup.classList.toggle("show");
+}
+function popup3() {
+  var popup = document.getElementById("reversesnowangelsPopup");
+  popup.classList.toggle("show");
+}
+function popup4() {
+  var popup = document.getElementById("birddogPopup");
+  popup.classList.toggle("show");
+}
+function popup5() {
+  var popup = document.getElementById("floorpullupsPopup");
+  popup.classList.toggle("show");
+}
+function popup6() {
+  var popup = document.getElementById("bentbackrowsPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+<h3 id = "title_chest" >Chest:</h3>
+<button type="button" onclick="document.getElementById('Chest').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Chest').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img2" src="https://dl.dropboxusercontent.com/s/qe4uqzym9r4j4nf/chest3.jpg" alt="chest image">
+    The chest muscles are made up of the pectoralis major and, underneath that, the pectoralis minor. The pectoralis major is the larger muscle and has two parts, an upper portion (called the clavicular head) and the lower portion (called the sternal head).<br><br>
+    The chest muscles are responsible for moving the arms across the body and up and down, as well as other movements like flexion, adduction, and rotation. Most chest exercises will involve pushing the arms away from the body or the body away from the arms.<br><br>
+    Because your chest includes some of the largest muscles in the upper body, you use those muscles all day long. You push open a door, wash your hair, or get up and down from the floor. It's important to keep them strong for all your daily activities. The stronger your chest muscles are, the stronger your entire body is.
+</div>
+<table id = "Chest" style ="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Chest1" name="Incline push-up" value="chest">
+                    <label for="Chest1"></label></td>
+        <td>
+            <div class="popup" onclick="popup7()">Incline push-ups
+                <img class="popupimg" id="inclunepushupsPopup"
+                     src="https://dl.dropboxusercontent.com/s/jiry4a81h69mz3j/incline_pushup.jpg"
+                           alt="Incline push-ups Image">
+            </div>
+        </td>
+        <td>3 sets, until failure</td>
+        <td><a href="https://www.youtube.com/watch?v=0CcVzNxrcdc"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Chest2" name="Chest flyes" value="chest">
+                    <label for="Chest2"></label></td>
+        <td>
+            <div class="popup" onclick="popup8()">Chest flyes
+                <img class="popupimg" id="chestflyesPopup"
+                     src="https://dl.dropboxusercontent.com/s/7vw0u9niqtb4uwp/chest_fly.png"
+                           alt="Chest flyes Image">
+            </div>
+        </td>
+        <td>3 sets, 1 minute each</td>
+        <td><a href="https://www.youtube.com/watch?v=7bo3RaOEL8g&t=339s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Chest3" name="Worm push-ups" value="chest">
+                    <label for="Chest3"></label></td>
+        <td>
+            <div class="popup" onclick="popup9()">Worm push-ups
+                <img class="popupimg" id="wormpushupPopup"
+                     src=""
+                           alt="Worm push-ups Image">
+            </div>
+        </td>
+        <td>3 sets, until failure</td>
+        <td><a href=" "
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Chest4" name="Chest press" value="chest">
+                    <label for="Back4"></label></td>
+        <td>
+            <div class="popup" onclick="popup10()">Chest press
+                <img class="popupimg" id="chestpressPopup"
+                     src="https://dl.dropboxusercontent.com/s/gxwq5pffby0on1x/chest_press.jpg"
+                           alt="Chest press Image">
+            </div>
+        </td>
+        <td>3 sets, 1 minute each</td>
+        <td><a href="https://www.youtube.com/watch?v=7bo3RaOEL8g&t=411s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Chest5" name="Diamond push-ups" value="chest">
+                    <label for="Chest5"></label></td>
+        <td>
+            <div class="popup" onclick="popup11()">Diamond push-ups
+                <img class="popupimg" id="diamondpushupPopup"
+                     src="https://dl.dropboxusercontent.com/s/o7qfafniq2dz3ai/diamond_pressup.jpg"
+                           alt="Diamond push-ups Image">
+            </div>
+        </td>
+        <td>3 sets, 1 minute each</td>
+        <td><a href="https://www.youtube.com/watch?v=J0DnG1_S92I"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+
+function popup7() {
+var popup = document.getElementById("inclunepushupsPopup");
+popup.classList.toggle("show");
+}
+function popup8() {
+var popup = document.getElementById("chestflyesPopup");
+popup.classList.toggle("show");
+}
+function popup9() {
+var popup = document.getElementById("wormpushupPopup");
+popup.classList.toggle("show");
+}
+function popup10() {
+var popup = document.getElementById("chestpressPopup");
+popup.classList.toggle("show");
+}
+function popup11() {
+var popup = document.getElementById("diamondpushupPopup");
+popup.classList.toggle("show");
+}
+</script>
+
+<h3 id = "title_arms" >Arms:</h3>
+<button type="button" onclick="document.getElementById('Arm').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Arm').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img3" src="https://dl.dropboxusercontent.com//s/8jx152v112xcl2j/arms.jpg" alt="chest image">
+    <strong>Stronger arms make it easier to perform everyday tasks</strong>. Whether you're driving, carrying shopping bags, picking up kids, or even doing the laundry, daily living is that little bit easier when you've got powerful arms.<br><br>
+    <strong>Increased arm strength will increase results in any workouts</strong> - even exercises that focus on other body parts. From swimming and running to tennis and yoga, strong arms provide the balance and foundation to propel your results from good to great.<br><br>
+    <strong>Muscle burns more calories than fat</strong> so strong, toned arms can help you achieve weight loss. Arm exercises are also a fantastic way to strengthen and tone your core as your abdominal muscles engage when you perform the repetitions. <br><br>
+    <strong>Keeping your arms pumped up will also give you a healthy heart</strong>, according to the American Heart Association. Plus, strength training can boost bone density and keep your bones healthy - which is particularly important as you get older.<br><br>
+    <strong>Arm exercises are one of the most flexible types of training</strong> as you can tone your arms with little or no equipment whether you're at home, at the gym or even on holiday. Toned arms can also boost your confidence and encourage your to wear tops that show off your muscle definition.
+</div>
+<table id = "Arm" style ="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Arms1" name="Plank ups" value="arms">
+                    <label for="Arms1"></label></td>
+        <td title="Switch up the leading hand of this exercise">
+            <div class="popup" onclick="popup12()">Plank ups
+                <img class="popupimg" id="plankupsPopup"
+                     src="https://dl.dropboxusercontent.com/s/oang1bdx9fuzg6l/plank_ups.jpg"
+                           alt="Plank ups Image">
+            </div>
+        </td>
+        <td>3 sets, 1 minute <br> alternating direction</td>
+        <td><a href="https://www.youtube.com/watch?v=LICrkuVmD4M"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Arms2" name="Tricep dips" value="arms">
+                    <label for="Arms2"></label></td>
+        <td>
+            <div class="popup" onclick="popup13()">Tricep dips
+                <img class="popupimg" id="tricepdipsPopup"
+                     src="https://dl.dropboxusercontent.com/s/t1mw1goq8ooez1z/bent-back_rows.jpg"
+                           alt="Tricep dips Image">
+            </div>
+        </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=6kALZikXxLc"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Arms3" name="Tiger bends push-up" value="arms">
+                    <label for="Arms3"></label></td>
+        <td>
+            <div class="popup" onclick="popup14()">Tiger bends push-up
+                <img class="popupimg" id="tigerbendsPopup"
+                     src="https://dl.dropboxusercontent.com/s/c16mlx1wq1cnit1/tigerbends.jpg"
+                           alt="Tiger bends push-up Image">
+            </div>
+        </td>
+        <td>3 sets, 10 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=gzyzcs_TaHA"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Arms4" name="Military press" value="arms">
+                    <label for="Arms4"></label></td>
+        <td>
+            <div class="popup" onclick="popup15()">Military press
+                <img class="popupimg" id="militarypressPopup"
+                     src="https:/dl.dropboxusercontent.com/s/tfpe5f3pjk9v2kt/military_press.jpg"
+                           alt="Military press Image">
+            </div>
+        </td>
+        <td>3 sets, <br>
+            1 min or failure</td>
+        <td><a href="https://www.youtube.com/watch?v=TacMZ7g6OIw"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Arms6" name="Tricep extensions" value="arms">
+                    <label for="Arms6"></label></td>
+        <td>
+            <div class="popup" onclick="popup16()">Tricep extensions
+                <img class="popupimg" id="tricepextensionsPopup"
+                     src="https:/dl.dropboxusercontent.com/s/ghdolt31y58tm65/tricep_extecsions.jpg"
+                           alt="Tricep extensions Image">
+            </div>
+        </td>
+        <td>3 sets, until failure</td>
+        <td><a href="https://www.youtube.com/watch?v=9wxRhONFsRA"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Arms7" name="Resistance band bicep curls" value="arms">
+                    <label for="Arms7"></label></td>
+        <td>
+            <div class="popup" onclick="popup17()">Resistance band bicep curls
+                <img class="popupimg" id="bicepcurlsPopup"
+                     src="https://dl.dropboxusercontent.com/s/6t0udrzk553it75/bicep_curl.jpg"
+                           alt="Resistance band bicep curls Image">
+            </div>
+        </td>
+        <td>3 sets, 10 reps each arm</td>
+        <td><a href="https://www.youtube.com/watch?v=8Dn-5iYfYxE&t=9s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup12() {
+var popup = document.getElementById("plankupsPopup");
+popup.classList.toggle("show");
+}
+function popup13() {
+var popup = document.getElementById("tricepdipsPopup");
+popup.classList.toggle("show");
+}
+function popup14() {
+var popup = document.getElementById("tigerbendsPopup");
+popup.classList.toggle("show");
+}
+function popup15() {
+var popup = document.getElementById("militarypressPopup");
+popup.classList.toggle("show");
+}
+function popup16() {
+var popup = document.getElementById("tricepextensionsPopup");
+popup.classList.toggle("show");
+}
+function popup17() {
+var popup = document.getElementById("bicepcurlsPopup");
+popup.classList.toggle("show");
+}
+</script>
+
+<h3 id = "title_abs" >Abdominal:</h3>
+<button type="button" onclick="document.getElementById('Abs').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Abs').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img4" src="https://dl.dropboxusercontent.com/s/f40ntq5xdup07hv/abs1.jpg" alt="abs image">
+    Everyday activities such as bending, turning and sitting might seem easy or mundane but once they become painful or difficult they're hard to ignore. <strong>A strong core helps give you the foundation and inner strength to lead the life you want.</strong><br><br>
+    Modern life means we're inevitably sitting more, which can lead to numerous issues, including back pain. <strong>Regularly training your core helps improve your posture, reduce slouching and lessens the likelihood of back pain.</strong><br><br>
+    <strong>A strong core can help you utilise other body parts to optimal efficiency</strong>, so if you are focusing on improving strength in other areas, it is important not to neglect your abs.<br><br>
+    Whether you're standing, walking or running, maintaining your balance is an essential way to avoid injury. <strong>Having a strong core will stabilise your body</strong> giving you the freedom to move to your heart's content with minimal risk of falling.
+</div>
+<table id = "Abs" style ="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Abs1" name="Planks" value="core">
+                    <label for="back1"></label></td>
+        <td>
+            <div class="popup" onclick="popup18()">Planks
+                <img class="popupimg" id="planksPopup"
+                     src="https://dl.dropboxusercontent.com/s/t07rob3k0s663lb/plank.jpg"
+                           alt="Planks Image">
+            </div>
+        </td>
+        <td>3 sets, 1 minute each</td>
+        <td><a href="https://www.youtube.com/watch?v=TvxNkmjdhMM"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Abs2" name="Treading the needle" value="core">
+                    <label for="Back2"></label></td>
+        <td>
+            <div class="popup" onclick="popup19()">Side planks crunches
+                <img class="popupimg" id="sideplankcrunchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/c9xi8tcsxdcfoir/side_crunches.jpg"
+                           alt="Side planks crunches Image">
+            </div>
+        </td>
+        <td>3 sets, 30 seconds per <br>
+            variation on each side</td>
+        <td><a href="https://www.youtube.com/watch?v=g7tb8aNb_BY"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Abs3" name="Reverse corkscrew" value="core">
+                    <label for="Abs3"></label></td>
+        <td>
+            <div class="popup" onclick="popup20()">Reverse corkscrew
+                <img class="popupimg" id="reversecorkscrewsPopup"
+                     src="https://dl.dropboxusercontent.com/s/rlkg17p8k8iidol/reverse_corkscrew.jpg"
+                           alt="Reverse corkscrew Image">
+            </div>
+        </td>
+        <td>3 sets, 1 min<br>
+            variation on each side</td>
+        <td><a href="https://www.youtube.com/watch?v=vc1E5CfRfos&list=PLRS2DE4P39EdCAYKkWqPfd9b6ZeNodzz2&t=546"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+     <tr>
+        <td><input type="checkbox" id="Abs4" name="Extinction ab workout" value="core">
+                    <label for="Abs4"></label></td>
+        <td>
+            <div class="popup" onclick="popup21()">Extinction ab workout
+                <img class="popupimg" id="extinctionabsPopup"
+                     src="https://dl.dropboxusercontent.com/s/pv7vxcmsbywrw8i/leg_raises.png"
+                           alt="Extinction ab workout Image">
+            </div>
+        </td>
+        <td> follow video </td>
+        <td><a href="https://www.youtube.com/watch?v=bx9SssAikQo"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup18() {
+var popup = document.getElementById("planksPopup");
+popup.classList.toggle("show");
+}
+function popup19() {
+var popup = document.getElementById("sideplankcrunchesPopup");
+popup.classList.toggle("show");
+}
+function popup20() {
+var popup = document.getElementById("reversecorkscrewsPopup");
+popup.classList.toggle("show");
+}
+function popup21() {
+var popup = document.getElementById("extinctionabsPopup");
+popup.classList.toggle("show");
+}
+</script>
+<hr>
+<hr>
+<h2 id = lower_body>Lower body</h2>
+
+<h3 id = "title_glutes" >Glutes:</h3>
+<button type="button" onclick="document.getElementById('Glutes').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Glutes').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img5" src="https://dl.dropboxusercontent.com/s/bmkxk7pn17anb5c/glutes2.jpg" alt="glutes">
+    <strong>Improved Posture:</strong>Having weak or underdeveloped glutes can have detrimental effects on your posture, as they are part of your stabilization system.
+    When your glutes are not properly toned, your latissimus dorsi overcompensates, pulling the torso and shoulders out of their proper position. If your hip flexors are stronger than your glutes, they can pull your pelvis into an unnatural alignment. This can cause both poor posture and pain.<br><br>
+    <strong>Injury Prevention:</strong>Glutes that are not preforming properly increase the risk of injury to the knees, lower back, hamstrings, and groin. Therefore, strengthening these muscles is extremely important when trying to protect your body from injuries. Strong glutes help decrease the risk of injury during exercises like dead lifting by taking some of the pressure off your lower back.<br><br>
+    <strong>Defeat Back Pain:</strong>The glutes play a major role in relieving some of the stress and pressure from your lower back. Your glutes help control the movement of the pelvis, hips, legs, and torso. The glutes help slow down the flexion of your hips which helps counteract the downward pull of gravity. This helps prevent your lumbar spine from over-rounding forward. Your glutes help to stabilize the pelvis and movement in the hip joint. Therefore, having strong glutes means that your lower back does not bear the full force of your motion. Using a roller to properly stretch and massage your glute muscles can help promote better movement of the pevlis, hips, and legs.
+</div>
+<table id = "Glutes" style ="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Glutes1" name="Bulgarian split squats" value="butt">
+                    <label for="Glutes1"></label></td>
+        <td>
+            <div class="popup" onclick="popup22()">Bulgarian-split squats
+                <img class="popupimg" id="bulgariansplitsPopup"
+                     src="https://dl.dropboxusercontent.com/s/5ka7xsf2eipd05p/split-squat.jpg"
+                           alt="Bulgarian-split squats Image">
+            </div>
+        </td>
+        <td>3 sets, 1 min each</td>
+        <td><a href="https://www.youtube.com/watch?v=RCWkvwz7DoU"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Glutes2" name="Pistol/box squats" value="butt">
+                    <label for="Glutes2"></label></td>
+        <td>
+            <div class="popup" onclick="popup23()">Pistol/box squats
+                <img class="popupimg" id="pistol/boxsquatssPopup"
+                     src="https://dl.dropboxusercontent.com/s/rkmwt48e3voa65d/box_squat.jpg"
+                           alt="Pistol/box squats Image">
+            </div>
+        </td>
+        <td>3 sets, 1 min each side</td>
+        <td><a href="https://www.youtube.com/watch?v=vc1E5CfRfos&list=PLRS2DE4P39EdCAYKkWqPfd9b6ZeNodzz2&t=277"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Glutes3" name="Jump squats" value="butt">
+                    <label for="Glutes3"></label></td>
+        <td>
+            <div class="popup" onclick="popup24()">Jump squats
+                <img class="popupimg" id="jumpsquatsPopup"
+                     src="https://dl.dropboxusercontent.com/s/22l6nupq1f4ppps/jump_squat.jpg?"
+                           alt="Jump squats Image">
+            </div>
+        </td>
+        <td>3 sets, until failure</td>
+        <td><a href="https://www.youtube.com/watch?v=BRfxI2Es2lE"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Glutes4" name="Hip thrusts" value="butt">
+                    <label for="Glutes4"></label></td>
+        <td>
+            <div class="popup" onclick="popup25()">Hip thrusts
+                <img class="popupimg" id="hipthrustsPopup"
+                     src="https://dl.dropboxusercontent.com/s/2rh4foobnsjo5wu/hip_thrust.jpg"
+                           alt="Hip thrusts Image">
+            </div>
+        </td>
+        <td>3 sets of 20 reps</td>
+        <td><a href="https://www.youtube.com/watch?v=SEdqd1n0cvg"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Glutes5" name="Single leg hip thrusts" value="butt">
+                    <label for="Glutes5"></label></td>
+        <td>
+            <div class="popup" onclick="popup26()">Single leg hip thrusts
+                <img class="popupimg" id="singleleghipthrustsPopup"
+                     src="https://dl.dropboxusercontent.com/s/57yno7zr79jwtdy/single-leg.jpg"
+                           alt="Single leg hip thrustsImage">
+            </div>
+        </td>
+        <td>3 sets, 10 reps per leg</td>
+        <td><a href="https://www.youtube.com/watch?v=om7q9aCVvR0"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Glutes6" name="Donkey kicks" value="butt">
+                    <label for="Glutes6"></label></td>
+        <td>
+            <div class="popup" onclick="popup27()">Donkey kicks
+                <img class="popupimg" id="donkeydicksPopup"
+                     src="https://dl.dropboxusercontent.com/s/g3rubi80y6kma6b/donkey_kicks.jpg"
+                           alt="Donkey kicks Image">
+            </div>
+        </td>
+        <td>3 sets, until failure per leg</td>
+        <td><a href="https://www.youtube.com/watch?v=npjYULUiGYY"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Glutes7" name="Crab walks" value="butt">
+                    <label for="Glutes7"></label></td>
+        <td>
+            <div class="popup" onclick="popup28()">Crab walks
+                <img class="popupimg" id="crabwalksPopup"
+                     src="https://dl.dropboxusercontent.com/s/wbztfe5goui9fo8/crab_walk.jpg"
+                           alt="Crab walks Image">
+            </div>
+        </td>
+        <td>3 sets, until failure</td>
+        <td><a href="https://www.youtube.com/watch?v=d-TnbIfHOD0"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup22() {
+var popup = document.getElementById("bulgariansplitsPopup");
+popup.classList.toggle("show");
+}
+function popup23() {
+var popup = document.getElementById("pistol/boxsquatssPopup");
+popup.classList.toggle("show");
+}
+function popup24() {
+var popup = document.getElementById("jumpsquatsPopup");
+popup.classList.toggle("show");
+}
+function popup25() {
+var popup = document.getElementById("hipthrustsPopup");
+popup.classList.toggle("show");
+}
+function popup26() {
+var popup = document.getElementById("singleleghipthrustsPopup");
+popup.classList.toggle("show");
+}
+function popup27() {
+var popup = document.getElementById("donkeydicksPopup");
+popup.classList.toggle("show");
+}
+function popup28() {
+var popup = document.getElementById("crabwalksPopup");
+popup.classList.toggle("show");
+}
+</script>
+
+<h3 id = "title_legs" >Legs:</h3>
+<button type="button" onclick="document.getElementById('Legs').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Legs').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img6" src="https://dl.dropboxusercontent.com/s/t652j9ckyxuvp7y/legs1.jpg" alt="legs image">
+    <strong>Improving functional strength:</strong> helping you do daily activities at ease such as walking, sitting down and standing back up.<br><br>
+    <strong>Burn More Calories</strong> Your lower body holds the largest muscle in the body, which is your gluteus maximus. By training this area more, your body will work harder, meaning that you will be burning more calories.
+    Your metabolism will also increase. This is because the body will require more calories to repair the muscles in this area than it would for the smaller muscle groups.<br><br>
+    <strong>Reduce Injury Risk:</strong> The benefits of leg exercises train and strengthen your lower body, which can help you across all other sports and activities, even just walking and running.
+    By incorporating functional leg strengthening exercises, you will be able to work on your hamstrings, quadriceps, and even hip flexors. These are all muscles that you use in your everyday life, so by working on them, you increase stability and endurance.
+    Leg training is especially important if you play other sports in minimizing injury. So ensuring that you remain in optimal health is always a good reason to do something, like training your legs.<br><br>
+    <strong>Improving muscle building efforts:</strong> Some of our leg muscles are the largest in our body, meaning that working on these large muscle groups will allow you to effectively build more muscle mass and increase strength.<br><br>
+    <strong>Symmetry:</strong> Although having a symmetrical balanced physique is more of an aesthetic concern, it is also important to recognise that combining lower body training with upper body will carry over to your results and performance in the gym.<br><br>
+</div>
+<table id = "Legs" style ="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs1" name="Squats" value="butt">
+                    <label for="Legs1"></label></td>
+        <td>
+            <div class="popup" onclick="popup29()">Squats
+                <img class="popupimg" id="squatsPopup"
+                     src="https://dl.dropboxusercontent.com/s/rkmwt48e3voa65d/box_squat.jpg"
+                           alt="Squats Image">
+            </div>
+        </td>
+        <td>3 sets of 20 reps <br>
+            or until failure</td>
+        <td><a href="https://www.youtube.com/watch?v=yPjQi2XQFCk"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs2" name="Heel raises" value="calf">
+                    <label for="Legs2"></label></td>
+        <td>
+            <div class="popup" onclick="popup30()">Heel raises
+                <img class="popupimg" id="heelraisesPopup"
+                     src="https://dl.dropboxusercontent.com/s/563i5w91a00cbcj/calf_raises.jpg"
+                           alt="Heel raises Image">
+            </div>
+        </td>
+        <td>3 sets of 20 reps <br>
+            or until failure</td>
+        <td><a href="https://www.youtube.com/watch?v=iZO2ncn-weM"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs3" name="Single-leg Heel raises" value="calf">
+                    <label for="Legs3"></label></td>
+        <td>
+            <div class="popup" onclick="popup31()">Single-leg Heel raises
+                <img class="popupimg" id="singlelegheelraisessPopup"
+                     src="https://dl.dropboxusercontent.com/s/nc2o9b323htsgq0/single-leg_heelraises.png"
+                           alt="Single-leg Heel raises Image">
+            </div>
+        </td>
+        <td>3 sets, 15 reps per leg</td>
+        <td><a href="https://www.youtube.com/watch?v=2wDwvNNLikU"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs4" name="Downward-dog calf stretches" value="butt">
+                    <label for="Legs4"></label></td>
+        <td>
+            <div class="popup" onclick="popup32()">Downward-dog calf stretches
+                <img class="popupimg" id="downwardsdogstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/1p65v0o7py19191/downwardsdog_stretch.jpg"
+                           alt="Downward-dog calf stretches Image">
+            </div>
+        </td>
+        <td>3 sets of 10 reps per leg</td>
+        <td><a href="https://www.youtube.com/watch?v=4afOqZ_awcw"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs5" name="Skipping" value="whole-body">
+                    <label for="Legs5"></label></td>
+        <td>
+            <div class="popup" onclick="popup33()">Skipping
+                <img class="popupimg" id="skippingsPopup"
+                     src="https://dl.dropboxusercontent.com/s/cnmhyfkatlg83vi/skipping.jpg"
+                           alt="Skipping Image">
+            </div>
+        </td>
+        <td>Until failure</td>
+        <td><a href="https://www.youtube.com/watch?v=PUCQ2pvnyW4"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs7" name="Alt. Sprinter lunges" value="butt">
+                    <label for="Legs7"></label></td>
+        <td>
+            <div class="popup" onclick="popup34()">Alt. Sprinter lunges
+                <img class="popupimg" id="AltsprintlungesPopup"
+                     src="https://dl.dropboxusercontent.com/s//9og94kf1edzxvwa/alt_lunges.jpg"
+                           alt="Alt. Sprinter lunges Image">
+            </div>
+        </td>
+        <td>3 sets, 1 minute</td>
+        <td><a href="https://www.youtube.com/watch?v=vc1E5CfRfos&list=PLRS2DE4P39EdCAYKkWqPfd9b6ZeNodzz2&t=712s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs8" name="Plyo. Sprinter lunges" value="butt">
+                    <label for="Legs8"></label></td>
+        <td>
+            <div class="popup" onclick="popup35()">Plyo. Sprinter lunges
+                <img class="popupimg" id="plyosprinterlungesPopup"
+                     src="https://dl.dropboxusercontent.com/s/neh53cvch87n6ul/plyo_lunges..jpg"
+                           alt="Plyo. Sprinter lunges Image">
+            </div>
+        </td>
+        <td>3 sets, 1 minute</td>
+        <td><a href="https://www.youtube.com/watch?v=vc1E5CfRfos&list=PLRS2DE4P39EdCAYKkWqPfd9b6ZeNodzz2&t=422s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup29() {
+var popup = document.getElementById("squatsPopup");
+popup.classList.toggle("show");
+}
+function popup30() {
+var popup = document.getElementById("heelraisesPopup");
+popup.classList.toggle("show");
+}
+function popup31() {
+var popup = document.getElementById("singlelegheelraisessPopup");
+popup.classList.toggle("show");
+}
+function popup32() {
+var popup = document.getElementById("downwardsdogstretchesPopup");
+popup.classList.toggle("show");
+}
+function popup33() {
+var popup = document.getElementById("skippingsPopup");
+popup.classList.toggle("show");
+}
+function popup34() {
+var popup = document.getElementById("AltsprintlungesPopup");
+popup.classList.toggle("show");
+}
+function popup35() {
+var popup = document.getElementById("plyosprinterlungesPopup");
+popup.classList.toggle("show");
+}
+</script>
+<hr>
+<hr>
+<h2 id = "title_cardio" >Cardio</h2>
+
+<button type="button" onclick="document.getElementById('Cardio').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Cardio').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img7" src="https://dl.dropboxusercontent.com/s/hn31q2k1lgdwq63/cardio1.jpg" alt="cardio image">
+    <strong>Improved brain activity</strong> Studies have shown links between regular aerobic exercise and improved brain activity, and reduced age-related decline in brain activity.<br><br>
+    <strong>Strengthens your heart:</strong> Cardio strengthens hearts muscles, thereby decreasing the strain and number of heart contractions required for blood circulation, reducing heart rate thereby increasing efficiency.<br><br>
+    <strong>It helps reduce health risks:</strong> Reduces blood chelosterol levels, reducing risk of heart attacks. Also, regular cardio fortifies and increases bodies immune system (T-cells). Increases lung capacity and helps reduce risks of type 2 diabetes.<br><br>
+    <strong>May help relieve depression, anxiety and stress:</strong> Aerobic workouts lift our spirits by reducing levels of natural stress and depression hormones (adrenaline and cortisol), according to a recent study in the Journal of Physical Therapy Science. Activities like running and swimming also increase overall blood flow and provide our minds fresh energy and oxygen, another factor that could help us feel better.<br><br>
+    <strong>It improves your sex life:</strong> Improved energy and stamina can be put to work in other ways hahahaha.<br><br>
+    <strong>Improved look and feel of your skin:</strong> Researchers found elevated levels of a substance critical to cell health called IL-15 in skin samples of participants after exercise. That finding that could shed light on why cardio seems to make our skin look better.<br>
+</div>
+<table id = "Cardio" style ="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Cardio1" name="Bike ride" value="cardio">
+                    <label for="Cardio1"></label></td>
+        <td>
+            <div class="popup" onclick="popup36()">Bike ride
+                <img class="popupimg" id="bikeridePopup"
+                     src="https://dl.dropboxusercontent.com/s/yfb7ld2b5c3r5gt/biking.jpg.jpg"
+                           alt="Bike ride Image">
+            </div>
+        </td>
+        <td> - </td>
+        <td><a href=" "
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Cardio2" name="Running" value="cardio">
+                    <label for="Cardio2"></label></td>
+        <td>
+            <div class="popup" onclick="popup37()">Running
+                <img class="popupimg" id="runningPopup"
+                     src="https://dl.dropboxusercontent.com/s/wonl2pjlw9hbdpb/running.jpg"
+                           alt="Running Image">
+            </div>
+        </td>
+        <td>5 km</td>
+        <td><a href=" "
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Cardio3" name="Skipping" value="cardio">
+                    <label for="Cardio3"></label></td>
+        <td>
+            <div class="popup" onclick="popup38()">Skipping
+                <img class="popupimg" id="skippingPopup"
+                     src="https://dl.dropboxusercontent.com/s/cnmhyfkatlg83vi/skipping.jpg"
+                           alt="Skipping Image">
+            </div>
+        </td>
+        <td> - </td>
+        <td><a href= "https://www.youtube.com/watch?v=PUCQ2pvnyW4"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Cardio4" name="Rowing machine" value="cardio">
+                    <label for="Cardio4"></label></td>
+        <td>
+            <div class="popup" onclick="popup39()">Rowing machine
+                <img class="popupimg" id="rowingmachinePopup"
+                     src="https://dl.dropboxusercontent.com/s/stxibd5ix6p6rhj/rowing.jpg"
+                           alt="Rowing machine Image">
+            </div>
+        </td>
+        <td>2 km</td>
+        <td><a href="https://www.youtube.com/watch?v=MnGwdJD8enU"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Cardio5" name="Swimming" value="cardio">
+                    <label for="Cardio5"></label></td>
+        <td>
+            <div class="popup" onclick="popup40()">Swimming
+                <img class="popupimg" id="swimmingPopup"
+                     src="https://dl.dropboxusercontent.com/s/hr3sq89di58kp42/swimmin.jpg"
+                           alt="Swimming Image">
+            </div>
+        </td>
+        <td>x number of lengths</td>
+        <td><a href=" "
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup36() {
+var popup = document.getElementById("bikeridePopup");
+popup.classList.toggle("show");
+}
+function popup37() {
+var popup = document.getElementById("runningPopup");
+popup.classList.toggle("show");
+}
+function popup38() {
+var popup = document.getElementById("skippingPopup");
+popup.classList.toggle("show");
+}
+function popup39() {
+var popup = document.getElementById("rowingmachinePopup");
+popup.classList.toggle("show");
+}
+function popup40() {
+var popup = document.getElementById("swimmingPopup");
+popup.classList.toggle("show");
+}
+
+</script>
+<hr>
+<hr>
+<h2 id = "title_flex&yoga">Yoga and Flexibility exercises</h2>
+
+<h3 id = "title_global" >Global Flexibility & Stretching Exercises:</h3>
+<button type="button" onclick="document.getElementById('Global').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Global').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img8" src="https://dl.dropboxusercontent.com/s/nh1qm1dimnd1o99/y%26f1.jpg" alt="yoga image">
+    <strong>Improves physical function and capacity</strong> Regular yoga has been found to improve muscle tone and definition, body posture and reduced back pain. In addition yoga has been found to decrease heart rate.<br><br>
+    <strong>Reduced stress and increased calmness</strong> Regularly engaging in poses that stretch and open up your body can bring about feelings of relaxation. The physical benefits can extend to a relaxed state of mind. You may find it easier to unwind once your body feels better.<br><br>
+    Athelete have been found to incorporate flexibility and yoga to <strong>complement their training by developing whole-body strength and flexibility</strong>.<br><br>
+    <strong>Improved flexibility</strong> in your body enables you to withstand more physical stress. Plus, you will rid your body of any muscle imbalances, which will reduce your chance of getting injured during physical activity. Correcting muscle imbalances requires a combination of strengthening the underactive muscles and stretching the overactive (tight) ones.
+</div>
+<table id = "Global" style="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Flexibility1" name="Flexibility routine" value="flexibility">
+                    <label for="Flexibility1"></label></td>
+        <td>
+            <div class="popup" onclick="popup41()">Flexibility routine
+                <img class="popupimg" id="flexibilityroutinePopup"
+                     src="https://dl.dropboxusercontent.com/s/d4b99hgjwpnym7j/flexibility.jpg"
+                           alt="Flexibility routine Image">
+            </div>
+        </td>
+        <td>20 mins</td>
+        <td><a href="https://www.youtube.com/watch?v=lPKRiU9u_Hc"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="Legs6" name="Calf streches" value="butt">
+                    <label for="Legs6"></label></td>
+        <td>
+            <div class="popup" onclick="popup42()">Calf streches
+                <img class="popupimg" id="calfstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/47qi6174ze3e6ly/calf_stretches.jpg"
+                           alt="Calf streches Image">
+            </div>
+        </td>
+        <td>Follow video</td>
+        <td><a href="https://www.womenshealthmag.com/uk/fitness/running/a706581/best-calf-stretches-for-runners/"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup41() {
+var popup = document.getElementById("flexibilityroutinePopup");
+popup.classList.toggle("show");
+}
+function popup42() {
+var popup = document.getElementById("calfstretchesPopup");
+popup.classList.toggle("show");
+}
+</script>
+
+<h3 id = "title_targeted" >Targeted Flexibility and Stretching Exercises:</h3>
+<button type="button" onclick="document.getElementById('Targeted').style.visibility='hidden'">Click to hide table</button>
+<button type="button" onclick="document.getElementById('Targeted').style.visibility='visible'">Click to see table</button>
+<div class="clearfix">
+  <img class="img8" src="https://dl.dropboxusercontent.com/s/z13d5wmed1b67hq/trgeted1.jpg" alt="yoga image">
+    <strong>Improves physical function and capacity</strong> Regular yoga has been found to improve muscle tone and definition, body posture and reduced back pain. In addition yoga has been found to decrease heart rate.<br><br>
+    <strong>Reduced stress and increased calmness</strong> Regularly engaging in poses that stretch and open up your body can bring about feelings of relaxation. The physical benefits can extend to a relaxed state of mind. You may find it easier to unwind once your body feels better.<br><br>
+    Athelete have been found to incorporate flexibility and yoga to <strong>complement their training by developing whole-body strength and flexibility</strong>.<br><br>
+    <strong>Improved flexibility</strong> in your body enables you to withstand more physical stress. Plus, you will rid your body of any muscle imbalances, which will reduce your chance of getting injured during physical activity. Correcting muscle imbalances requires a combination of strengthening the underactive muscles and stretching the overactive (tight) ones.
+</div>
+<table id = "Targeted" style="width:100%">
+    <tr>
+        <th>Check selected workout(s)</th>
+        <th>Exercise</th>
+        <th>Reps / Duration</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="targeted1" name="targeted_upperback" value="flexibility">
+                    <label for="targeted1"></label></td>
+        <td>
+            <div class="popup" onclick="popup43()">Upper-back stretches
+                <img class="popupimg" id="upperbackstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/i71aqqhuu6wa2an/back_stretches.jpg"
+                           alt="Upper-back stretches Image">
+            </div>
+        </td>
+        <td>-</td>
+        <td><a href="https://www.youtube.com/watch?v=vuGnzLxRvZM&t=18s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="targeted2" name="targeted_shoulder" value="flexibility">
+                    <label for="targeted2"></label></td>
+        <td>
+            <div class="popup" onclick="popup44()">Shoulder stretches
+                <img class="popupimg" id="shoulderstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/jkf4a4ipvmnvyvq/shoulder_strech.jpg"
+                           alt="Shoulder stretches Image">
+            </div>
+        </td>
+        <td>-</td>
+        <td><a href="https://www.youtube.com/watch?v=3g95hw1QMmY"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="targeted7" name="targeted_chest" value="flexibility">
+                    <label for="targeted7"></label></td>
+        <td>
+            <div class="popup" onclick="popup45()">Chest stretches
+                <img class="popupimg" id="cheststretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/wesbqlscsslip0h/chest_stretch.jpg.jpg"
+                           alt="Chest stretches Image">
+            </div>
+        </td>
+        <td>-</td>
+        <td><a href="https://www.youtube.com/watch?v=SV7l1sfEmO0&t=465s"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="targeted3" name="targeted_arms" value="flexibility">
+                    <label for="targeted3"></label></td>
+        <td>
+            <div class="popup" onclick="popup46()">Arm stretches
+                <img class="popupimg" id="armstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/d4b99hgjwpnym7j/flexibility.jpg"
+                           alt="Arm stretches Image">
+            </div>
+        </td>
+        <td>-</td>
+        <td><a href="https://www.youtube.com/watch?v=I8hQpBI9vDM"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="targeted4" name="tageted_lowerback" value="butt">
+                    <label for="targeted4"></label></td>
+        <td>
+            <div class="popup" onclick="popup47()">lower-back stretches
+                <img class="popupimg" id="lowerbackstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/wagyfrz9zzbdmri/lowerback_stretches.jpg"
+                           alt="lower-back stretches Image">
+            </div>
+        </td>
+        <td>Follow video</td>
+        <td><a href="https://www.nhs.uk/live-well/exercise/lower-back-pain-exercises/"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="targeted5" name="tageted_groin" value="butt">
+                    <label for="targeted5"></label></td>
+        <td>
+            <div class="popup" onclick="popup48()">Groin stretches
+                <img class="popupimg" id="groinstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/w4rzzpd0nxbhyyo/groin_stretch.jpg"
+                           alt="Groin stretchesImage">
+            </div>
+        </td>
+        <td>Follow video</td>
+        <td><a href="https://www.verywellfit.com/best-stretching-exercises-for-groin-pain-3120314"
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="targeted6" name="tageted_legs" value="butt">
+                    <label for="targeted6"></label></td>
+        <td>
+            <div class="popup" onclick="popup49()">Leg stretches
+                <img class="popupimg" id="legstretchesPopup"
+                     src="https://dl.dropboxusercontent.com/s/pwn08cksp9470ml/leg_stretches.jpg"
+                           alt="Leg stretches Image">
+            </div>
+        </td>
+        <td>Follow video</td>
+        <td><a href=""
+                                  target="_blank"><button>Click me</button></a></td>
+    </tr>
+</table>
+<script>
+function popup43() {
+var popup = document.getElementById("upperbackstretchesPopup");
+popup.classList.toggle("show");
+}
+function popup44() {
+var popup = document.getElementById("shoulderstretchesPopup");
+popup.classList.toggle("show");
+}
+function popup45() {
+var popup = document.getElementById("cheststretchesPopup");
+popup.classList.toggle("show");
+}
+function popup46() {
+var popup = document.getElementById("armstretchesPopup");
+popup.classList.toggle("show");
+}
+function popup47() {
+var popup = document.getElementById("lowerbackstretchesPopup");
+popup.classList.toggle("show");
+}
+function popup48() {
+var popup = document.getElementById("groinstretchesPopup");
+popup.classList.toggle("show");
+}
+function popup49() {
+var popup = document.getElementById("legstretchesPopup");
+popup.classList.toggle("show");
+}
+</script>
+<hr>
+<hr>
+<footer id = "contact_details" >
+    <address>
+    <p>Posted by: Kamsi Okeke</p>
+    <p>Contact information: <a href="mailto:someone@example.com">
+  kamsiokeke8242@gmail.com</a>.</p>
+    </address>
+</footer>
+
+</body>
+</html>
