@@ -16,6 +16,7 @@ while count < num:
 
 
             consuemd = input("Enter what you ate/drank: ")
+            quantity = float(input("Enter how many portions of {0} you had: ".format(consuemd)))
             query = consuemd.replace(' ', '+')
 
             URL = 'https://www.nutracheck.co.uk/CaloriesIn/Product/Search?desc=' + query
@@ -41,9 +42,9 @@ while count < num:
                 just_calories = nutritional_details2.rstrip(spaces + characters + letters)
                 list.append(int(just_calories))
 
-            average_calories = sum(list)/len(list)
+            average_calories = quantity * sum(list)/len(list)
             
-            print("On average there are {0} calories contianed within a portion/serving of {1}.".format(average_calories, consuemd))
+            print("On average there are {0} calories contianed within a {2} portions of {1}.".format(average_calories, consuemd, quantity))
             global daily_calories
             daily_calories.append(average_calories)
 
