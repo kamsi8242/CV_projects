@@ -26,14 +26,14 @@ def Calorie_tracker():
     print("The calorie values of the food are taken from the nutracheck.co.uk website.")
     print("The Harris-Benedict Equation was used to determine Basal Metabolic rate.")
     
-    
+    # Breakfast
     while sum(daily_calories) == 0:
         Breakfast = input("Did you have Breakfast in the morning (Y/N)? \n").upper()
         if Breakfast == "Y" or Breakfast == "N":
             # print("Congrats")
             break
         else:
-            print("Invalid input")
+            print("Invlaid input, please neter Y for yes or N for no")
 
     if Breakfast == "Y":
         while Breakfast == "Y":
@@ -104,10 +104,11 @@ def Calorie_tracker():
         daily_calories.append(breakfast_cals)
         print("Breakfast calorific intake is {0} calories".format(breakfast_cals)) 
     
+    # Brunch
     else:
         while sum(daily_calories) == 0:
             Brunch = input("Did you have Brunch instead of Breakfast (Y/N)? \n").upper()
-            if Brunch == "Y" or "N":
+            if Brunch == "Y" or Brunch == "N":
                 break
             else:
                 print("Invalid input, enter Y for yes or N for no")
@@ -178,10 +179,11 @@ def Calorie_tracker():
             daily_calories.append(brunch_cals)
             print("Brunch calorific intake is {0} calories".format(brunch_cals))    
 
+    # Lunch
     if Breakfast == "Y" or Breakfast and Brunch == "N":
         while True:
             Lunch = input("Did you have lunch (Y/N)? \n").upper()
-            if Lunch == "Y" or "N":
+            if Lunch == "Y" or Lunch == "N":
                 break
             else:
                 print("Invalid input, please enter Y for yes or N for no")
@@ -252,9 +254,9 @@ def Calorie_tracker():
             daily_calories.append(lunch_cals)
             print("Lunch calorific intake is {0} calories".format(lunch_cals)) 
 
-    while sum(daily_calories) > 0:
+    while sum(daily_calories) == True:
         Afternoon_Snacks = input("Have you eaten any snacks today (Y/N) \n").upper()
-        if Afternoon_Snacks == "Y" or "N":
+        if Afternoon_Snacks == "Y" or Afternoon_Snacks == "N":
             break
         else:
             print("Invlaid input, Please enter Y for yess or N for no")
@@ -327,10 +329,10 @@ def Calorie_tracker():
 
     while sum(daily_calories) == True:
         Dinner = input("Did you eat dinner today (Y/N) \n").upper()
-        if Dinner == "Y" or "N":
+        if Dinner == "Y" or Dinner == "N":
             break
         else:
-            print("Invlaid input, please neter Y ofr yes or N for no")
+            print("Invlaid input, please neter Y for yes or N for no")
 
     if Dinner == "Y":
         while Dinner == "Y":
