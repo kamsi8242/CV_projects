@@ -25,6 +25,8 @@ SECRET_KEY = '601cd396-868d-4f50-8804-1819f4891e7e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CRISPY_TEMPLATE_PACK="bootstrap4"
+
 ALLOWED_HOSTS = []
 
 # Application references
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 ]
 
 # Middleware framework
